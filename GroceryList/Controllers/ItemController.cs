@@ -53,7 +53,7 @@ namespace GroceryList.Controllers
 
             _context.SaveChanges();
 
-            eturn RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
 
