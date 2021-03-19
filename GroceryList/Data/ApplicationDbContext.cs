@@ -7,7 +7,7 @@ namespace GroceryList.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Items> Items { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {

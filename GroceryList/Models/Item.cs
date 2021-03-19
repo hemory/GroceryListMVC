@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GroceryList.Models
 {
-    public class Items
+    public class Item
     {
         public int Id { get; set; }
 
