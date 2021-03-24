@@ -1,11 +1,47 @@
 ﻿@model List<GroceryList.Models.Item>
 
-<h1>Grocery List</h1>
-<a asp-action="create">Add Item</a>
+<div class="jumbotron">
+    <h1>Grocery List</h1>
+    <p>
+        
+            <a class="btn btn-lg btn-success" role="button" asp-action="create">Add Item</a>
+      
+    </p>
+    
+    
+    <div class="row">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                @foreach (var item in Model)
+                {
+                    <li class="list-group-item">
+                        <div class="row">
+                            
+                            <div class="col-md-2"> <input class="form-check-input me-1" type="checkbox" value="">
+                                @item.Description
+                                </div>
+                            <div class="col-md-2"><a asp-action="delete" asp-route-id="@item.Id">delete</a>
+                            </div>
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@item.Description <a asp-action="delete" asp-route-id="@item.Id">delete</a></li>
-    }
-</ul>
+                        </div>
+                    </li>
+                }
+            </ul>
+    
+        </div>
+        <div class="col-md-4">
+                
+            </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
